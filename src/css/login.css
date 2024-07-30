@@ -1,0 +1,18 @@
+
+
+.bg-slate-800 {
+
+    width: 110%; /* Ancho del input (puedes ajustarlo según tus necesidades) */
+    padding: 16px;
+    align-items: center;
+    min-height: 400px;
+  }
+
+.contenedor{
+    display: grid;
+    place-items: center;
+    margin: auto;
+}
+
+
+  
