@@ -4,6 +4,8 @@ import { Route, Routes } from 'react-router-dom'
 import Registro from './pages/registro'
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
 import {AcmeLogo} from "./pages/AcmeLogo";
+import Inicio from './pages/inicio';
+import Servicios from './pages/agendar';
 
 
 function App() {
@@ -16,13 +18,13 @@ function App() {
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="/">
+          <Link color="foreground" href="/inicio">
             Inicio
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Customers
+          <Link href="/agendar" aria-current="page">
+            Agendar
           </Link>
         </NavbarItem>
         <NavbarItem>
@@ -46,8 +48,11 @@ function App() {
       <Routes>
         <Route path='login' element={<Login/>}/>
         <Route path='registro' element={<Registro/>}/>
+        <Route path='inicio' element={<Inicio/>}/>
+        <Route path='agendar' element={<Servicios/>}/>
       </Routes>
     </div>
+      
     </>
   )
 }
