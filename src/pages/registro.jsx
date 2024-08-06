@@ -4,7 +4,8 @@ import { CiUser } from "react-icons/ci";
 import { RiLockPasswordLine } from "react-icons/ri";
 const Registro = () => {
   return(
-      <div className="contenedor">
+    <div className="py-24 sm:py-32 relative isolate overflow-hidden     px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-60 lg:pt-20">
+      <div className="contenedor pt-10">
         <div className= "bg-slate-800 border border-slate-400 rounded-md p-8 shadow-lg backdrop-filter backdrop-blur-sm bg-opacity-30 relative ">
           <h1 className="text-4xl text-white-bold text-center mb-6">Sign Up</h1>
           <form action="">  
@@ -29,6 +30,7 @@ const Registro = () => {
             </div>
           </form>
           </div>
+      </div>
       </div>
   )
 }

@@ -5,7 +5,9 @@ import Registro from './pages/registro'
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
 import {AcmeLogo} from "./pages/AcmeLogo";
 import Inicio from './pages/inicio';
-import Servicios from './pages/agendar';
+import Servicios from './pages/servicios';
+import Agendar from './pages/agendar';
+
 
 
 function App() {
@@ -23,13 +25,13 @@ function App() {
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="/agendar" aria-current="page">
-            Agendar
+          <Link href="/servicios" aria-current="page">
+            Servicios
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
+          <Link color="foreground" href="/agendar">
+            Agenda tu cita
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -49,7 +51,8 @@ function App() {
         <Route path='login' element={<Login/>}/>
         <Route path='registro' element={<Registro/>}/>
         <Route path='inicio' element={<Inicio/>}/>
-        <Route path='agendar' element={<Servicios/>}/>
+        <Route path='servicios' element={<Servicios/>}/>
+        <Route path='Agendar' element={<Agendar/>}/>
       </Routes>
     </div>
       

@@ -11,7 +11,7 @@ export default {
     extend: {},
   },
   darkMode: "class",
-  plugins: [
+  plugins: [      import('@tailwindcss/forms'),
     nextui()
   ]
 }
