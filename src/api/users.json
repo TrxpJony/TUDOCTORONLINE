@@ -1,0 +1,16 @@
+{
+    "usuarios":[
+        {
+            "id":1,
+            "Correo":"jdvega074@soy.sena.edu.co",
+            "Contraseña":"25d55ad283aa400af464c76d713c07ad",
+            "usuaio":"jonypasta"
+        },
+        {
+            "id":2,
+            "Correo":"dsjimenez@soy.sena.edu.co",
+            "Contraseña":"5e8667a439c68f5145dd2fcbecf02209", 
+            "usuaio":"davizg"
+        }
+    ]
+}
