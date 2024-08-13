@@ -3,8 +3,9 @@ import {CalendarDate} from "@internationalized/date";
 
 export default function Agendar() {
 return (
+  <div className="py-24 sm:py-32 relative isolate overflow-hidden     px-6  shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-60 lg:pt-28">
     <form>
-        <div className="border-b border-gray-900/10 ">
+        <div className="border-b border-gray-900/10 pt-10 ">
 
         <div className="border-b border-gray-900/10 pb-12">
         <h2 className="text-base font-semibold leading-7 text-white text-3xl font-bold tracking-tight text-white sm:text-4xl">Agenda tu cita</h2>
@@ -62,8 +63,8 @@ return (
             </label>
             <div className="mt-2">
                 <select
-                id="country"
-                name="country"
+                id="type-cite"
+                name="type-cite"
                 autoComplete="country-name"
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-200 sm:max-w-xs sm:text-sm sm:leading-6"
                 >
@@ -86,13 +87,13 @@ return (
                 Fecha de cita
               </label>
               <div className="mt-2">
-              <DateInput placeholderValue={new CalendarDate(2024, 11, 6)} className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-200 sm:max-w-xs sm:text-sm sm:leading-6" /> 
+              <DateInput placeholderValue={new CalendarDate(2024, 11, 6)} className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm  ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-200 sm:max-w-xs sm:text-sm sm:leading-6" /> 
               </div>
             </div>
 
             <div className="sm:col-span-2 sm:col-start-1">
-              <label htmlFor="city" className="block text-sm font-medium leading-6 text-gray-900">
-                City
+              <label htmlFor="city" className="block text-sm font-medium leading-6 text-white">
+                Ciudad
               </label>
               <div className="mt-2">
                 <input
@@ -105,35 +106,6 @@ return (
               </div>
             </div>
 
-            <div className="sm:col-span-2">
-              <label htmlFor="region" className="block text-sm font-medium leading-6 text-gray-900">
-                State / Province
-              </label>
-              <div className="mt-2">
-                <input
-                  id="region"
-                  name="region"
-                  type="text"
-                  autoComplete="address-level1"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-200 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
-
-            <div className="sm:col-span-2">
-              <label htmlFor="postal-code" className="block text-sm font-medium leading-6 text-gray-900">
-                ZIP / Postal code
-              </label>
-              <div className="mt-2">
-                <input
-                  id="postal-code"
-                  name="postal-code"
-                  type="text"
-                  autoComplete="postal-code"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-200 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
           </div>
         </div>
                 </div>
@@ -144,12 +116,13 @@ return (
         </button>
         <button
           type="submit"
-          className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-blue-500 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
           Save
         </button>
       </div>
     </form>
+    </div>
   )
 }
 

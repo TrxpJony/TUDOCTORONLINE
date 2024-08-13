@@ -32,12 +32,9 @@ const features = [
 const Servicios = () => {
   return (
     
-    <div className=" py-24 sm:py-32 relative isolate overflow-hidden     px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+    <div className=" py-24 sm:py-32 relative isolate overflow-hidden     px-6 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto pt-10 max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-white">
-              TuDoctorOnline
-          </h2>
+        <div className="mx-auto pt-20 max-w-2xl lg:text-center">
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Nuestros servicios
           </p>
