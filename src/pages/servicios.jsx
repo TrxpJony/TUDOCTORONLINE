@@ -31,8 +31,9 @@ const features = [
 
 const Servicios = () => {
   return (
-    
-    <div className=" py-24 sm:py-32 relative isolate overflow-hidden     px-6 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-20">
+    <div className="">
+    <div className="mx-auto max-w-7xl ">
+    <div className=" py-24 sm:py-32 relative isolate overflow-hidden     px-6 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto pt-20 max-w-2xl lg:text-center">
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -63,6 +64,8 @@ const Servicios = () => {
           </dl>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   );
 }

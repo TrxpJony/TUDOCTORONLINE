@@ -1,16 +1,179 @@
 {
-    "usuarios":[
-        {
-            "id":1,
-            "Correo":"jdvega074@soy.sena.edu.co",
-            "Contraseña":"25d55ad283aa400af464c76d713c07ad",
-            "usuaio":"jonypasta"
-        },
-        {
-            "id":2,
-            "Correo":"dsjimenez@soy.sena.edu.co",
-            "Contraseña":"5e8667a439c68f5145dd2fcbecf02209", 
-            "usuaio":"davizg"
-        }
-    ]
+  "usuarios": [
+    {
+      "id": "11cq",
+      "correo": "jdvega074@soy.sena.edu.co",
+      "contraseña": "fcea920f",
+      "usuario": "jonypasta",
+      "rol": "paciente"
+    },
+    {
+      "id": "22qp",
+      "correo": "dsjimenez@soy.sena.edu.co",
+      "contraseña": "5e8667a4",
+      "usuario": "davizg",
+      "rol": "paciente"
+    },
+    {
+      "id": "33ui",
+      "correo": "jsaley@soy.sena.edu.co",
+      "contraseña": "12323456",
+      "usuario": "aley",
+      "rol": "paciente"
+    },
+    {
+      "id": "88ce",
+      "correo": "jodavelo3040@gmail.com",
+      "contraseña": "Pinocho315",
+      "usuario": "jodavelo3040",
+      "rol": "paciente"
+    },
+    {
+      "id": "7c53",
+      "correo": "danna@gmail.com",
+      "contraseña": "1234",
+      "usuario": "danna",
+      "rol": "paciente"
+    },
+    {
+      "id": "6065",
+      "correo": "porfo@gmail.com",
+      "contraseña": "87654321",
+      "usuario": "Porfilio",
+      "rol": "paciente"
+    },
+    {
+      "id": "2f19",
+      "correo": "luisg@gmail.com",
+      "contraseña": "12345678",
+      "usuario": "Luismiglezg",
+      "rol": "paciente"
+    },
+    {
+      "id": "bdca",
+      "correo": "evelyn@gmail.com",
+      "contraseña": "87654321",
+      "usuario": "Evelynz",
+      "rol": "doctor"
+    }
+  ],
+  "citas": [
+    {
+      "id": "94a6",
+      "usuario_id": "11cq",
+      "nombre_usu": "jonathan",
+      "apellido_usu": "vega",
+      "correo": "jdvega074@soy.sena.edu.co",
+      "tipo_cita": "Consulta de Seguimiento",
+      "numero_autorizacion": "106566464G",
+      "fecha": "2025-02-06",
+      "hora": "02:00 PM",
+      "ciudad": "bogota",
+      "estado": "Inactivo"
+    },
+    {
+      "id": "e7c4",
+      "usuario_id": "11cq",
+      "nombre_usu": "juan",
+      "apellido_usu": "pedraza",
+      "correo": "juan@gmail.com",
+      "tipo_cita": "Servicio de Diagnóstico",
+      "numero_autorizacion": "123123445T",
+      "fecha": "2024-11-09",
+      "hora": "11:00 AM",
+      "ciudad": "bogota",
+      "estado": "Activo"
+    },
+    {
+      "id": "bc1c",
+      "usuario_id": "88ce",
+      "nombre_usu": "David",
+      "apellido_usu": "Lopez",
+      "correo": "jodavelo3040@gmail.com",
+      "tipo_cita": "Servicio de Diagnóstico",
+      "numero_autorizacion": "106457464J",
+      "fecha": "2024-02-05",
+      "hora": "03:00 PM",
+      "ciudad": "bogota",
+      "estado": "Activo"
+    },
+    {
+      "id": "f7e2",
+      "usuario_id": "88ce",
+      "nombre_usu": "jonathan",
+      "apellido_usu": "vega",
+      "correo": "jodavelo3040@gmail.com",
+      "tipo_cita": "Especialidad Médica",
+      "numero_autorizacion": "208566464Ñ",
+      "fecha": "2025-12-06",
+      "hora": "01:00 PM",
+      "ciudad": "medellin",
+      "estado": "Activo"
+    },
+    {
+      "id": "1875",
+      "usuario_id": "88ce",
+      "nombre_usu": "jonathan",
+      "apellido_usu": "vega",
+      "correo": "jodavelo3040@gmail.com",
+      "tipo_cita": "Consulta de Seguimiento",
+      "numero_autorizacion": "694566464a",
+      "fecha": "2024-02-05",
+      "hora": "11:00 AM",
+      "ciudad": "medellin",
+      "estado": "Activo"
+    },
+    {
+      "id": "41fd",
+      "usuario_id": "88ce",
+      "nombre_usu": "jonathan",
+      "apellido_usu": "vega",
+      "correo": "jodavelo3040@gmail.com",
+      "tipo_cita": "Consulta de Seguimiento",
+      "numero_autorizacion": "694816464G",
+      "fecha": "2024-02-04",
+      "hora": "03:00 PM",
+      "ciudad": "bogota",
+      "estado": "Inactivo"
+    },
+    {
+      "id": "16fe",
+      "usuario_id": "88ce",
+      "nombre_usu": "jonathan",
+      "apellido_usu": "vega",
+      "correo": "jodavelo3040@gmail.com",
+      "tipo_cita": "Consulta General",
+      "numero_autorizacion": "694566243y",
+      "fecha": "2024-08-29",
+      "hora": "11:00 AM",
+      "ciudad": "bogota",
+      "estado": "Activo"
+    },
+    {
+      "id": "6c16",
+      "usuario_id": "88ce",
+      "nombre_usu": "jonathan",
+      "apellido_usu": "vega",
+      "correo": "jodavelo3040@gmail.com",
+      "tipo_cita": "Especialidad Médica",
+      "numero_autorizacion": "669546464Ñ",
+      "fecha": "2024-08-26",
+      "hora": "01:00 PM",
+      "ciudad": "bogota",
+      "estado": "Activo"
+    },
+    {
+      "id": "316f",
+      "usuario_id": "2f19",
+      "nombre_usu": "luis",
+      "apellido_usu": "miguel",
+      "correo": "luisg@gmail.com",
+      "tipo_cita": "Especialidad Médica",
+      "numero_autorizacion": "1065646458Y",
+      "fecha": "2024-08-26",
+      "hora": "02:00 PM",
+      "ciudad": "bogota",
+      "estado": "Activo"
+    }
+  ]
 }

@@ -1,0 +1,106 @@
+import Cookies from "universal-cookie";
+import { Card, CardFooter, Button } from "@nextui-org/react";
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // Importa el hook useNavigate
+
+const cookies = new Cookies();
+
+export default function Cancelar() {
+    const [citas, setCitas] = useState([]);
+    const userId = cookies.get("id"); // Obtener el id del usuario desde las cookies
+    const navigate = useNavigate(); // Inicializa el hook useNavigate
+
+    useEffect(() => {
+        // Obtener datos desde el servidor JSON
+        fetch('http://localhost:3001/citas') // Cambia esta ruta si es necesario
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Filtrar las citas por id del usuario y estado "Activo"
+                if (typeof userId === 'string') {
+                    const filteredCitas = data.filter(cita => 
+                        typeof cita.usuario_id === 'string' &&
+                        cita.usuario_id === userId &&
+                        cita.estado === 'Activo' // Filtrar por estado
+                    );
+                    setCitas(filteredCitas);
+                } else {
+                    // Si userId no es una cadena, no se filtran citas
+                    setCitas([]);
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    }, [userId]);
+
+    const handleCardPress = (citaId) => {
+        navigate(`/citas/${citaId}`);
+    };
+
+    const handleCancel = async (citaId) => {
+        try {
+            const response = await fetch(`http://localhost:3001/citas/${citaId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            if (response.ok) {
+                // Actualizar el estado después de cancelar la cita
+                setCitas(citas.filter(cita => cita.id !== citaId));
+                console.log('Cita cancelada exitosamente');
+            } else {
+                console.error('Error al cancelar la cita');
+            }
+        } catch (error) {
+            console.error('Error de red:', error);
+        }
+    };
+
+    return (
+       <div className="py-20 sm:py-20 relative isolate overflow-hidden px-10 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-200 lg:pt-10">
+        <div className="relative isolate overflow-hidden px-6 py-8 shadow-2xl sm:rounded-3xl sm:px-12 md:py-12 lg:px-16 lg:py-16">
+            <div className="mx-auto max-w-2xl lg:text-center">
+                <p className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    Cancelar Citas
+                </p>
+            </div>
+            <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
+                {citas.map((cita, index) => (
+                    <Card 
+                        shadow="sm" 
+                        key={index} 
+                        isPressable 
+                        onPress={() => handleCardPress(cita.id)} // Usa el nuevo manejador
+                    >
+                        <CardFooter className="text-small justify-between">
+                            <b>{`${cita.tipo_cita}`}</b>
+                            <p className="text-default-500">{`${cita.fecha} a las ${cita.hora}`}</p>
+                            <p>{`${cita.nombre_usu} ${cita.apellido_usu}`}</p>
+                        </CardFooter>
+                        <Button 
+                                auto 
+                                color="error" 
+                                onClick={() => handleCancel(cita.id)}
+                            >
+                                Cancelar
+                            </Button>
+                    </Card>
+                    
+                ))}
+            </div>
+            <button
+                onClick={() => navigate(-1)}
+                className="mt-10 rounded-md bg-white px-3 py-2 text-sm font-semibold text-black shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                Volver
+            </button>
+        </div>
+        </div>
+    );
+}
